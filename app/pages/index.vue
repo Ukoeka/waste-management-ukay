@@ -142,7 +142,7 @@ const features = [
         </div>
 
         <div class="text-center">
-          <h3 class="text-5xl font-black text-emerald-400">98%</h3>
+          <h3 class="text-5xl font-black text-emerald-400">96%</h3>
           <p class="text-slate-400 mt-3">Collection Efficiency</p>
         </div>
 
