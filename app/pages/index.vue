@@ -132,7 +132,7 @@ const features = [
         class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-10"
       >
         <div class="text-center">
-          <h3 class="text-5xl font-black text-emerald-400">5K+</h3>
+          <h3 class="text-5xl font-black text-emerald-400">3K+</h3>
           <p class="text-slate-400 mt-3">Smart Bins</p>
         </div>
 
