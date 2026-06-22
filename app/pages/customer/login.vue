@@ -62,7 +62,7 @@ const handleLogin = () => {
         </div>
 
         <!-- Remember Me Checkbox Options -->
-        <div class="flex items-center justify-between pt-1">
+        <!-- <div class="flex items-center justify-between pt-1">
           <label class="flex items-center gap-2 cursor-pointer select-none">
             <input 
               v-model="loginData.rememberMe" 
@@ -71,7 +71,7 @@ const handleLogin = () => {
             />
             <span class="text-xs text-slate-600 font-medium">Remember this device</span>
           </label>
-        </div>
+        </div> -->
 
         <!-- Submit Button -->
         <div class="pt-2">
@@ -88,7 +88,7 @@ const handleLogin = () => {
       <!-- Footer Context Switcher Links -->
       <div class="bg-slate-50 px-6 sm:px-8 py-4 border-t border-slate-200 text-center text-xs text-slate-500">
         Don't have an account or device registered? 
-        <NuxtLink to="/customer/register-bin" class="font-bold text-[#3f51b5] hover:underline whitespace-nowrap ml-1">
+        <NuxtLink to="/customer/register" class="font-bold text-[#3f51b5] hover:underline whitespace-nowrap ml-1">
           Register here
         </NuxtLink>
       </div>
