@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  layout: 'default'
+  layout: 'admin'
 })
 const metrics = [
   { label: 'Total Enrolled Bins', value: '14,820' },

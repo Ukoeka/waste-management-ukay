@@ -1,7 +1,7 @@
 <!-- app/pages/customer/profile.vue -->
 <script setup>
 definePageMeta({
-  layout: 'default'
+  layout: 'customer'
 })
 
 const isEditing = ref(false)

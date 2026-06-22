@@ -1,7 +1,7 @@
 <!-- app/pages/customer/bin-status.vue -->
 <script setup>
 definePageMeta({
-  layout: 'default'
+  layout: 'customer'
 })
 
 // Mock states tracking telemetry loops

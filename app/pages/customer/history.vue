@@ -1,7 +1,7 @@
 <!-- app/pages/customer/history.vue -->
 <script setup>
 definePageMeta({
-  layout: 'default'
+  layout: 'customer'
 })
 
 const collectionHistory = [
