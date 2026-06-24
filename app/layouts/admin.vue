@@ -24,15 +24,7 @@
     </aside>
 
     <div class="flex-1 flex flex-col min-w-0">
-      <header class="h-16 bg-[#3f51b5] flex items-center justify-between px-6 shadow-md text-white">
-        <button class="bg-blue-600 hover:bg-blue-700 text-xs px-4 py-2 rounded font-medium shadow transition">
-          + Schedule Pickup
-        </button>
-        <div class="flex items-center gap-4 text-sm font-medium">
-          <span>🌐 English</span>
-          <div class="w-8 h-8 rounded-full bg-blue-700 flex items-center justify-center">🔔</div>
-        </div>
-      </header>
+      
 
       <main class="flex-1 p-6 overflow-y-auto">
         <slot />
