@@ -17,8 +17,11 @@
         <NuxtLink to="/admin/dashboard" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-700/50 transition text-sm">
           📊 Dashboard
         </NuxtLink>
-        <NuxtLink to="/customer/register-bin" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-700/50 transition text-sm">
-          🗑️ Register Bin (Wizard)
+        <NuxtLink to="/admin/users" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-700/50 transition text-sm">
+          📊 Users
+        </NuxtLink>
+        <NuxtLink to="/admin/customer/bins" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-700/50 transition text-sm">
+          🗑️ Bins
         </NuxtLink>
       </nav>
     </aside>
