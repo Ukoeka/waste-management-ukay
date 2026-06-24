@@ -59,8 +59,8 @@ const openBinModal = (bin) => {
           <!-- SIMULATED ROAD NETWORK LAYER (SVG Vectors matching bin coordinates) -->
           <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-30" xmlns="http://www.w3.org/2000/svg">
             <!-- Main Highway Horizontal Route -->
-            <path d="M -20,110 L 1200,110" fill="none" stroke="#64748b" stroke-width="14" stroke-linecap="round" />
-            <path d="M -20,110 L 1200,110" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6,6" />
+            <path d="M -20,110 L 1800,110" fill="none" stroke="#64748b" stroke-width="14" stroke-linecap="round" />
+            <path d="M -20,110 L 1800,110" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6,6" />
 
             <!-- Core Transit Loop Route -->
             <path d="M -20,290 L 450,290 Q 520,290 520,200 L 520,-20" fill="none" stroke="#475569" stroke-width="10" stroke-linecap="round" />
