@@ -111,7 +111,7 @@ const prevStep = () => { if (currentStep.value > 1) currentStep.value-- }
               <input v-model="formData.country" type="text" placeholder="United States" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition" />
             </div>
             <div>
-              <label class="block text-xs font-bold text-slate-600 mb-1">Zipcode / Postal Code</label>
+              <label class="block text-xs font-bold text-slate-600 mb-1">Zipcode</label>
               <input v-model="formData.zipcode" type="text" placeholder="10001" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition" />
             </div>
           </div>
