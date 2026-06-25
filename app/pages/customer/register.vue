@@ -162,7 +162,7 @@ const prevStep = () => { if (currentStep.value > 1) currentStep.value-- }
        <div class="bg-slate-50 px-6 sm:px-8 py-4 border-t border-slate-200 text-center text-xs text-slate-500">
         Already have an account? 
         <NuxtLink to="/customer/login" class="font-bold text-[#3f51b5] hover:underline whitespace-nowrap ml-1">
-          Sign in here
+          Sign in
         </NuxtLink>
       </div>
     </div>
