@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-slate-100 font-sans flex text-slate-800">
     <aside class="w-64 bg-[#2b3553] text-slate-300 flex flex-col hidden md:flex shrink-0">
       <div class="h-16 flex items-center px-6 bg-[#1d253b] font-bold text-white tracking-wide text-lg gap-2">
-        <span class="text-blue-500">♻️</span> EcoWaste UI
+        <span class="text-blue-500">♻️</span> EcoWaste Management
       </div>
       
       <div class="p-6 text-center border-b border-slate-700">
