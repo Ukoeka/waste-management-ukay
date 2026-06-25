@@ -137,7 +137,7 @@ const prevStep = () => { if (currentStep.value > 1) currentStep.value-- }
           <p class="text-slate-500 text-sm max-w-sm mx-auto">Your hardware tracking profile and location parameters have been linked cleanly into the main management system layer.</p>
           <div class="pt-4">
             <NuxtLink to="/customer/dashboard" class="inline-flex bg-[#3f51b5] hover:bg-blue-700 text-white text-xs px-6 py-2.5 rounded-lg font-bold tracking-wide transition shadow-md">
-              Go to Dashboard
+              Connect Wallet
             </NuxtLink>
           </div>
         </div>
