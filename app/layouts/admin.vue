@@ -9,8 +9,8 @@
         <div class="w-16 h-16 rounded-full bg-slate-400 mx-auto mb-3 overflow-hidden ring-2 ring-blue-500">
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Profile" />
         </div>
-        <h4 class="font-medium text-white text-sm">Alex Carter</h4>
-        <span class="text-xs text-slate-400">System Operator</span>
+        <h4 class="font-medium text-white text-sm">Ukay</h4>
+        <span class="text-xs text-slate-400">Senior Engineer</span>
       </div>
 
       <nav class="flex-1 p-4 space-y-1">
