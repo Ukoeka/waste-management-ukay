@@ -10,7 +10,7 @@ const profileData = ref({
   lastName: 'Doe',
   email: 'john.doe@example.com',
   phone: '+1 (555) 234-5678',
-  streetAddress: '742 Evergreen Terrace',
+  streetAddress: '742 Evergreen Terrace, Coventry',
   city: 'Springfield',
   state: 'IL',
   country: 'United States',
