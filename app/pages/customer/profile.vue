@@ -6,7 +6,7 @@ definePageMeta({
 
 const isEditing = ref(false)
 const profileData = ref({
-  firstName: 'John',
+  firstName: 'Jane',
   lastName: 'Doe',
   email: 'john.doe@example.com',
   phone: '+1 (555) 234-5678',
