@@ -107,7 +107,7 @@ const saveProfile = () => {
             <div class="bg-slate-100 border border-slate-200 text-slate-700 rounded-lg px-3 py-2 text-sm font-mono font-semibold select-all">
               {{ profileData.binId }}
             </div>
-            <p class="text-[10px] text-slate-400 mt-1">Hardware IDs cannot be altered after registration deployment cycles.</p>
+            <p class="text-[10px] text-slate-400 mt-1">Hardware IDs cannot be altered after registration deployment cycle.</p>
           </div>
         </div>
       </div>
