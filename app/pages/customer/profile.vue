@@ -8,7 +8,7 @@ const isEditing = ref(false)
 const profileData = ref({
   firstName: 'Jane',
   lastName: 'Doe',
-  email: 'john.doe@example.com',
+  email: 'john.doe@gmail.com',
   phone: '+1 (555) 234-5678',
   streetAddress: '742 Evergreen Terrace, Coventry',
   city: 'Springfield',
