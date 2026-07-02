@@ -49,7 +49,7 @@ const saveProfile = () => {
       <div class="p-6 sm:p-8 space-y-6">
         <!-- Section: Identity -->
         <div class="space-y-4">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 pb-1">Personal Credentials</h3>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 pb-1">Personal Information</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-bold text-slate-600 mb-1">First Name</label>
