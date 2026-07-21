@@ -3,7 +3,6 @@ export const useApi = () => {
 
   return $fetch.create({
     baseURL: config.public.apiBase,
-    credentials: 'include',
     headers: {
       Accept: 'application/json',
     },
