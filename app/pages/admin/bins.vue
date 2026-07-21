@@ -4,13 +4,43 @@ definePageMeta({
   layout: 'admin'
 })
 
-const globalBins = [
-  { id: 'BIN-9941X', owner: 'Marcus Vance', location: '44 Park Ave', status: 'Full', level: 92, lastReported: '3 mins ago' },
-  { id: 'BIN-1042Z', owner: 'Marcus Vance', location: '44 Park Ave', status: 'Empty', level: 12, lastReported: '10 mins ago' },
-  { id: 'BIN-8733W', owner: 'Clara Oswald', location: '12 Leaf Ln', status: 'Normal', level: 54, lastReported: '1 hr ago' },
-  { id: 'BIN-0922K', owner: 'Dave Miller', location: '89 High St', status: 'Full', level: 87, lastReported: '14 mins ago' },
-  { id: 'BIN-5512M', owner: 'Luke Pixel', location: '102 Tech Hub Rd', status: 'Empty', level: 4, lastReported: '48 mins ago' }
-]
+const api = useApi()
+const globalBins = ref([])
+const pending = ref(true)
+const error = ref(null)
+
+const normalizeBin = (bin) => {
+  const level = Number(bin?.level ?? bin?.fillPercentage ?? bin?.fill_percent ?? 0)
+
+  return {
+    id: bin?.id ?? bin?.hardwareId ?? bin?.binHardwareId ?? 'Unknown',
+    owner: bin?.owner ?? bin?.resident ?? bin?.assignee ?? 'Unassigned',
+    location: bin?.location ?? bin?.address ?? bin?.siteLocation ?? 'Unknown',
+    level,
+    status: bin?.status ?? (level >= 85 ? 'Full' : level >= 50 ? 'Normal' : 'Empty'),
+    lastReported: bin?.lastReported ?? bin?.lastPing ?? bin?.last_updated ?? 'N/A'
+  }
+}
+
+onMounted(async () => {
+  try {
+    console.log('admin bins: fetching', `${useRuntimeConfig().public.apiBase}/api/bins/status`)
+
+    const response = await api('/api/bins/status')
+    const bins = response?.data ?? response?.bins ?? response?.results ?? response
+
+    globalBins.value = Array.isArray(bins)
+      ? bins.map(normalizeBin)
+      : bins
+        ? [normalizeBin(bins)]
+        : []
+  } catch (err) {
+    error.value = err
+    console.error('admin bins: failed to load bin status', err)
+  } finally {
+    pending.value = false
+  }
+})
 </script>
 
 <template>
@@ -20,8 +50,16 @@ const globalBins = [
       <p class="text-xs text-slate-500">Real-time capacity tracking log grids across all deployed automated smart telemetry tracking systems.</p>
     </div>
 
+    <div v-if="pending" class="rounded border border-slate-200 bg-white px-4 py-3 text-sm text-slate-500 shadow-sm">
+      Loading bin status...
+    </div>
+
+    <div v-else-if="error" class="rounded border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 shadow-sm">
+      Failed to load bin status.
+    </div>
+
     <!-- Main Table Module Component Layout -->
-    <div class="bg-white rounded border border-slate-200 shadow-sm overflow-hidden">
+    <div v-else class="bg-white rounded border border-slate-200 shadow-sm overflow-hidden">
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse text-xs">
           <thead>
@@ -35,7 +73,7 @@ const globalBins = [
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-600">
-            <tr v-for="bin in globalBins" :key="bin.id" class="hover:bg-slate-50/50 transition duration-150">
+            <tr v-for="bin in globalBins ?? []" :key="bin.id" class="hover:bg-slate-50/50 transition duration-150">
               <td class="p-4 font-mono font-bold text-slate-700">{{ bin.id }}</td>
               <td class="p-4 text-slate-700 font-medium">{{ bin.owner }}</td>
               <td class="p-4 text-slate-500 font-light">{{ bin.location }}</td>
