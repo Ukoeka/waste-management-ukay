@@ -4,13 +4,26 @@ definePageMeta({
   layout: 'customer'
 })
 
-// Mock states tracking telemetry loops
-const fillPercentage = ref(78)
-const binHardwareId = ref('BIN-9941X')
-const lastPing = ref('3 minutes ago')
-const hardwareStatus = ref('Healthy')
+const fillPercentage = ref(0)
+const binHardwareId = ref('')
+const lastPing = ref('')
+const hardwareStatus = ref('Unknown')
+const error = ref(null)
 
-// Compute descriptive indicators based on volume metrics
+const api = useApi()
+
+try {
+  const statusData = await api('/api/bins/status')
+
+  fillPercentage.value = statusData?.fillPercentage ?? statusData?.fill_percent ?? 0
+  binHardwareId.value = statusData?.hardwareId ?? statusData?.binHardwareId ?? statusData?.id ?? 'Unknown'
+  lastPing.value = statusData?.lastPing ?? statusData?.last_updated ?? 'N/A'
+  hardwareStatus.value = statusData?.hardwareStatus ?? statusData?.status ?? 'Unknown'
+} catch (err) {
+  error.value = err
+  console.error('Failed to load bin status:', err)
+}
+
 const statusTier = computed(() => {
   if (fillPercentage.value >= 85) return { label: 'Action Required', color: 'text-red-600', progress: 'bg-red-500' }
   if (fillPercentage.value >= 60) return { label: 'Filling Up', color: 'text-amber-600', progress: 'bg-amber-500' }
