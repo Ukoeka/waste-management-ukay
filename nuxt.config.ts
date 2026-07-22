@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   runtimeConfig: {
     public: {
-      apiBase: 'https://lilli-unrestrictable-gayla.ngrok-free.dev',
+      apiBase: 'https://waste-api.postnexus.net/',
     },
   },
   devtools: { enabled: true },
