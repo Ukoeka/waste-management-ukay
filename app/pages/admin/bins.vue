@@ -77,7 +77,7 @@ onMounted(async () => {
                   <span class="font-bold text-slate-800 w-8">{{ bin.level }}%</span>
                   <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden border border-slate-200/40">
                     <div
-                      :class="['h-full transition-all duration-300', bin.level >= 85 ? 'bg-red-500' : bin.level >= 50 ? 'bg-amber-400' : 'bg-green-500']"
+                      :class="['h-full transition-all duration-300', bin.level >= 80 ? 'bg-red-500' : bin.level >= 50 ? 'bg-amber-400' : 'bg-green-500']"
                       :style="{ width: bin.level + '%' }"
                     ></div>
                   </div>
