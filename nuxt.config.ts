@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   runtimeConfig: {
     public: {
-      apiBase: 'https://crowd-selection-morris-come.trycloudflare.com',
+      apiBase: 'https://waste-api.postnexus.net/',
     },
   },
   devtools: { enabled: true },
