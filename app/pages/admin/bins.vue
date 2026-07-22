@@ -11,7 +11,7 @@ const error = ref(null)
 
 const normalizeBin = (bin) => {
   const level = Number(bin?.fillLevel ?? bin?.level ?? bin?.fillPercentage ?? bin?.fill_percent ?? 0)
-  const status = level >= 85 ? 'Full' : level >= 50 ? 'Normal' : 'Empty'
+  const status = level >= 80 ? 'Full' : level >= 50 ? 'Normal' : 'Empty'
 
   return {
     id: bin?.binId ?? bin?.id ?? bin?.hardwareId ?? bin?.binHardwareId ?? 'Unknown',
