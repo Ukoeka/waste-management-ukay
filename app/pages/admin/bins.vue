@@ -93,7 +93,21 @@ onMounted(async () => {
                   {{ bin.status }}
                 </span>
               </td>
-              <td class="p-4 text-slate-500 font-mono text-[11px] break-all">{{ bin.latestTxHash }}</td>
+              <td class="p-4 text-slate-500 font-mono text-[11px] break-all">
+                <template v-if="bin.latestTxHash && bin.latestTxHash !== 'N/A'">
+                  <a
+                    :href="`https://sepolia.etherscan.io/tx/${bin.latestTxHash}`"
+                    class="text-blue-600 hover:text-blue-800 underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {{ bin.latestTxHash }}
+                  </a>
+                </template>
+                <template v-else>
+                  {{ bin.latestTxHash }}
+                </template>
+              </td>
             </tr>
             <tr v-if="(globalBins ?? []).length === 0">
               <td colspan="4" class="p-6 text-center text-slate-400">No bins returned from the API.</td>
