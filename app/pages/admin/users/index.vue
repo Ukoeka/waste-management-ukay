@@ -17,7 +17,7 @@ const usersList = [
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
       <div>
         <h2 class="text-xl font-bold text-slate-800">Enrolled Registered Users</h2>
-        <p class="text-xs text-slate-500">Directory overview of all customer accounts registered with active hardware allocations.</p>
+        <!-- <p class="text-xs text-slate-500">Directory overview of all customer accounts registered with active hardware allocations.</p> -->
       </div>
     </div>
 
