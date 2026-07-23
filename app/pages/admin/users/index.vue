@@ -42,7 +42,7 @@ const usersList = [
               <td class="p-4 text-slate-700 font-medium">{{ user.name }}</td>
               <td class="p-4 text-slate-500 font-light">{{ user.email }}</td>
               <td class="p-4 text-slate-500 font-light">{{ user.address }}</td>
-              <td class="p-4 text-slate-500 font-light">{{ user.phone }}</td>
+              <!-- <td class="p-4 text-slate-500 font-light">{{ user.phone }}</td> -->
               <td class="p-4">
                 <span :class="[
                   'px-2.5 py-1 rounded text-[10px] font-bold tracking-normal inline-block text-center min-w-[75px]',
