@@ -31,7 +31,7 @@ const usersList = [
               <th class="p-4 font-bold text-sm">Full Name</th>
               <th class="p-4 font-bold text-sm">Email Address</th>
               <th class="p-4 font-bold text-sm">Deployment Address</th>
-              <th class="p-4 font-bold text-sm">Phone</th>
+              <!-- <th class="p-4 font-bold text-sm">Phone</th> -->
               <th class="p-4 font-bold text-sm">Account Status</th>
               <th class="p-4 font-bold text-sm text-right">Actions</th>
             </tr>
